@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <cs50.h>
+
 int checkString(string[]);
 int checkChar(char);
 char runString(string[], int);
@@ -11,7 +12,7 @@ bool isLower(char);
 int main(int argc, string argv[])
 {
 
-int returned = checkString(argv);
+int returned = checkString(argv); //checks that an alphanumeric string was entered as argument
 
 if(returned==1)
 {
@@ -24,21 +25,21 @@ int counter = 0;
 char c;
 char d;
 
-//printf("Enter a sentence to encrypt: ");
+printf("Enter a sentence to encrypt: ");
 string toencrypt = GetString();
 
 for(int i = 0, n = strlen(toencrypt); i<=n - 1; i++)
 {
     c = toencrypt[i];
-    whatchar = checkChar(c); //checks if character or space
+    whatchar = checkChar(c); //checks if alphanumeric character or space / symbol in sentence to encrypt
     
         if(whatchar == 0)
         {
-            d = runString(argv, counter);
+            d = runString(argv, counter); // gets the letter to rotate from keyword
             counter = counter + 1;
         }
             
-    printString(c, d, i, whatchar);
+    printString(c, d, i, whatchar); //adds chars and prints the string
 }
 printf("\n");
 }
