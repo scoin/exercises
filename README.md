@@ -1,4 +1,4 @@
-Created by Gregory Piccolo for CS50x.
+Created by Gregory Piccolo for CS50x in January 2014
 
 vigenere.c - vigenere cypher
 
