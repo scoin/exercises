@@ -15,7 +15,7 @@ int returned = checkString(argv);
 
 if(returned==1)
 {
-printf("you kidding me bro\n");
+printf("usage: ./vigenere [keyword] \n");
 return 1;
 }
 
